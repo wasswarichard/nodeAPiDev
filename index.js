@@ -131,7 +131,7 @@ const server = http.createServer((request, response) => {
     }
 });
 // const port = process.env.PORT || 3001;
-const port  = 3002
+const port  = 3001
 const hostname = 'localhost';
 server.listen(port, hostname, () => console.log(`Backend Server running on http://${hostname}:${port} ...`));
 // act on any unhandled errors/exceptions

@@ -13,10 +13,8 @@ module.exports = recipes => {
             const mostDeliveredPostCodeCount = Math.max(...Object.values(postCodeCounts));
             let mostDeliveredPostCode = Object.keys(postCodeCounts).filter(code => postCodeCounts[code] === mostDeliveredPostCodeCount);
             return resolve({
-                "busiest_postcode" : {
-                    "postcode" : mostDeliveredPostCode,
-                    "delivery_count" : mostDeliveredPostCodeCount
-                }
+                "postcode" : mostDeliveredPostCode[0],
+                "delivery_count" : mostDeliveredPostCodeCount
             });
         }
         catch (error){
